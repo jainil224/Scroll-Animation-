@@ -1,6 +1,6 @@
-# 🌌 Step Into Wonder: Immersive Parallax Landing Page
+# 🌌 Somnium: Immersive Parallax Landing Page
 
-Step Into Wonder is a single-page, highly cinematic, immersive parallax landing page built using **React (v19)**, **TypeScript**, **Tailwind CSS**, and **Vite**. 
+Somnium is a single-page, highly cinematic, immersive parallax landing page built using **React (v19)**, **TypeScript**, **Tailwind CSS**, and **Vite**. 
 
 The entire experience lives in a single-file implementation inside `src/App.tsx`, leveraging a direct-DOM high-performance animation engine to achieve a flawless **60fps interactive experience** across all device viewports.
 

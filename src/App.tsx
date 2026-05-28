@@ -345,7 +345,10 @@ export default function App() {
 
       // 4. Layer 4L & 4R: Curtains (Only update via RAF after entrance transition is disabled)
       if (!useTransition) {
-        const leftCurtainScrollTranslate = -lerp(0, 150, ep);
+        const isMob = window.innerWidth < 768;
+        const baseShift = isMob ? 35 : 0;
+
+        const leftCurtainScrollTranslate = -baseShift - lerp(0, 150, ep);
         const leftCurtainScale = lerp(1, 1.3, ep);
         if (curtainLRef.current) {
           const transX = mX * 6;
@@ -354,7 +357,7 @@ export default function App() {
           curtainLRef.current.style.transform = `translateX(${leftCurtainScrollTranslate}%) scale(${leftCurtainScale}) translate(${transX}px, ${transY}px)`;
         }
 
-        const rightCurtainScrollTranslate = lerp(0, 150, ep);
+        const rightCurtainScrollTranslate = baseShift + lerp(0, 150, ep);
         const rightCurtainScale = lerp(1, 1.3, ep);
         if (curtainRRef.current) {
           const transX = mX * 6;
@@ -524,7 +527,7 @@ export default function App() {
             transformOrigin: 'left center',
             objectPosition: 'right center',
             transition: useTransition ? 'transform 1.8s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
-            transform: curtainsOpen ? 'translateX(0%) scale(1)' : 'translateX(-100%) scale(1)',
+            transform: curtainsOpen ? (isMobile ? 'translateX(-35%) scale(1)' : 'translateX(0%) scale(1)') : 'translateX(-100%) scale(1)',
           }}
         />
 
@@ -539,7 +542,7 @@ export default function App() {
             transformOrigin: 'right center',
             objectPosition: 'left center',
             transition: useTransition ? 'transform 1.8s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
-            transform: curtainsOpen ? 'translateX(0%) scale(1)' : 'translateX(100%) scale(1)',
+            transform: curtainsOpen ? (isMobile ? 'translateX(35%) scale(1)' : 'translateX(0%) scale(1)') : 'translateX(100%) scale(1)',
           }}
         />
 
@@ -562,7 +565,7 @@ export default function App() {
             <h1
               style={{
                 fontFamily: "'Viaoda Libre', serif",
-                fontSize: '44px',
+                fontSize: 'clamp(32px, 10vw, 44px)',
                 lineHeight: '0.95',
                 color: '#fff',
                 marginBottom: '10px',
@@ -577,7 +580,7 @@ export default function App() {
             <p
               style={{
                 fontFamily: "'Imprima', sans-serif",
-                fontSize: '13px',
+                fontSize: 'clamp(11px, 3.5vw, 13px)',
                 lineHeight: '1.6',
                 color: '#e5e4e7',
                 maxWidth: '310px',
@@ -906,7 +909,7 @@ export default function App() {
           <h2
             style={{
               fontFamily: "'Viaoda Libre', serif",
-              fontSize: isMobile ? '28px' : '46px',
+              fontSize: isMobile ? 'clamp(20px, 6.5vw, 28px)' : '46px',
               fontWeight: 'normal',
               letterSpacing: '0.06em',
               color: '#ffffff',

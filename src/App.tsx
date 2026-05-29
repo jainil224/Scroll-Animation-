@@ -7,9 +7,9 @@ const CURTAIN_RIGHT = "https://res.cloudinary.com/dsn0ks2hl/image/upload/v177996
 const WORLD_BG = "https://res.cloudinary.com/dsn0ks2hl/image/upload/v1779968548/World_bg_ltivsq.png";
 
 const CARD_IMAGES = [
-  "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260525_160507_2ccbb4eb-1469-484f-af25-59168ad9a233.png&w=1280&q=85",
-  "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260525_160644_072a7f68-a101-4ded-a332-7d37707dbdd1.png&w=1280&q=85",
-  "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260525_160706_1c153d04-0dfb-4ac9-a4ef-e74f301c329c.png&w=1280&q=85"
+  "https://res.cloudinary.com/dsn0ks2hl/image/upload/v1780023115/two_upscaled_sauqie.jpg",
+  "https://res.cloudinary.com/dsn0ks2hl/image/upload/v1780023115/one_zbfoxt.jpg",
+  "https://res.cloudinary.com/dsn0ks2hl/image/upload/v1780023114/three_upscaled_r6dqay.jpg"
 ];
 
 // Scene 2 Card Data (9 Cards)
@@ -707,8 +707,8 @@ export default function App() {
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
               >
-                <img src={CARD_IMAGES[1]} className="absolute inset-0 w-full h-full object-cover opacity-35" />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,6,8,0.8) 0%, rgba(10,6,8,0.4) 100%)' }} />
+                <img src={CARD_IMAGES[1]} className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,6,8,0.7) 0%, rgba(10,6,8,0.2) 100%)' }} />
                 <span style={{ position: 'relative', fontSize: '32px', fontFamily: "'Viaoda Libre', serif", color: '#f0e4c0', lineHeight: '1' }}>32</span>
                 <span style={{ position: 'relative', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#e5e4e7', fontWeight: 'bold' }}>World Patrons</span>
               </div>
@@ -811,8 +811,8 @@ export default function App() {
                   transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
               >
-                <img src={CARD_IMAGES[1]} className="absolute inset-0 w-full h-full object-cover opacity-35" />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,6,8,0.85) 0%, rgba(10,6,8,0.4) 100%)' }} />
+                <img src={CARD_IMAGES[1]} className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,6,8,0.7) 0%, rgba(10,6,8,0.2) 100%)' }} />
                 <span style={{ position: 'relative', fontSize: '38px', fontFamily: "'Viaoda Libre', serif", color: '#f0e4c0', lineHeight: '1' }}>32</span>
                 <span style={{ position: 'relative', fontSize: '10.5px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#e5e4e7', fontWeight: 'bold' }}>World Patrons</span>
               </div>
